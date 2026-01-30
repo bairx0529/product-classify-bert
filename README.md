@@ -5,31 +5,8 @@
 该项目旨在基于商品标题预测其对应的类目，使用 **BERT** 模型进行商品标题的文本分类。通过预训练的 **BERT** 模型，我们能够自动为商品标题分配类目标签，帮助电商平台提高商品发布效率。项目通过 **FastAPI** 构建了一个高效的 API 接口，用户可以通过该接口实时获得商品类目的预测结果。
 
 ## 项目结构
+product-classify-bert/├── src/ # 源代码│ ├── main.py # 训练与评估主入口│ ├── runner/ # 包含训练和评估模块│ ├── model/ # 模型定义与实现│ ├── preprocess/ # 数据处理与特征工程│ ├── web/ # API 和前端部分│ └── configuration.py # 配置文件├── data/ # 数据文件夹│ ├── processed/ # 处理后的数据│ ├── raw/ # 原始数据│ ├── train.txt # 训练集│ ├── valid.txt # 验证集│ └── test.txt # 测试集├── logs/ # 训练日志├── pretrained/ # 预训练模型├── requirements.txt # 项目依赖包├── README.md # 项目说明└── config.py # 配置文件
 
-product-classify-bert/
-│
-├── src/ # 源代码
-│ ├── main.py # 训练与评估主入口
-│ ├── runner/ # 包含训练和评估模块
-│ ├── model/ # 模型定义与实现
-│ ├── preprocess/ # 数据处理与特征工程
-│ ├── web/ # API 和前端部分
-│ └── configuration.py # 配置文件
-│
-├── data/ # 数据文件夹
-│ ├── processed/ # 处理后的数据
-│ ├── raw/ # 原始数据
-│ ├── train.txt # 训练集
-│ ├── valid.txt # 验证集
-│ └── test.txt # 测试集
-│
-├── logs/ # 训练日志
-│
-├── pretrained/ # 预训练模型
-│
-├── requirements.txt # 项目依赖包
-├── README.md # 项目说明
-└── config.py # 配置文件
 
 
 ---
