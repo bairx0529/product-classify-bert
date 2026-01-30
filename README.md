@@ -25,7 +25,7 @@ product-classify-bert/
 ├── requirements.txt      # 项目依赖包
 ├── README.md             # 项目说明
 └── config.py             # 配置文件
-
+```
 
 ---
 
@@ -54,6 +54,7 @@ product-classify-bert/
 
 ```bash
 pip install -r requirements.txt
+```
 依赖库
 
 pytorch：用于模型训练与推理。
