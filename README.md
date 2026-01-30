@@ -55,79 +55,56 @@ product-classify-bert/
 ```bash
 pip install -r requirements.txt
 ```
-依赖库
+## 依赖库
+- pytorch：用于模型训练与推理。
+- transformers：Hugging Face 提供的库，用于加载 BERT 预训练模型。
+- datasets：用于高效加载和处理大规模数据集。
+- scikit-learn：用于模型评估。
+- tensorboard：用于可视化训练过程中的损失、准确率等指标。
+- tqdm：用于显示训练进度条，方便实时跟踪训练状态。
+- FastAPI：用于构建商品类目预测的在线推理服务。
+- uvicorn：FastAPI 的服务器，提供高效的服务运行。
 
-pytorch：用于模型训练与推理。
+## 使用方法
 
-transformers：Hugging Face 提供的库，用于加载 BERT 预训练模型。
-
-datasets：用于高效加载和处理大规模数据集。
-
-scikit-learn：用于模型评估。
-
-tensorboard：用于可视化训练过程中的损失、准确率等指标。
-
-tqdm：用于显示训练进度条，方便实时跟踪训练状态。
-
-FastAPI：用于构建商品类目预测的在线推理服务。
-
-uvicorn：FastAPI 的服务器，提供高效的服务运行。
-
-使用方法
-数据集准备
-
+### 数据集准备
 将数据集文件（train.txt、valid.txt、test.txt）放置在 data/ 文件夹中。数据集格式应包括商品标题（text_a）和类目标签（label）。
 
-训练模型
-
+### 训练模型
 运行以下命令进行模型训练：
 
+```bash
 python src/main.py train
-
+```
 
 训练过程中的模型和日志文件将保存在指定的目录中。
 
-评估模型
+###评估模型
 
 完成训练后，可以使用以下命令对模型进行评估：
-
+```bash
 python src/main.py evaluate
-
+```
 
 这将计算模型的准确率、F1 分数、Top-k 准确率等评估指标，并生成混淆矩阵进行可视化。
 
-在线推理服务
+###在线推理服务
 
 为了便于实时预测，我们使用 FastAPI 构建了在线推理服务。运行以下命令启动服务：
-
+```bash
 uvicorn src.web.app:app --reload
-
+```
 
 服务启动后，您可以通过以下接口进行商品类目预测：
 
-POST /predict: 输入商品标题，返回预测类目。
-
-示例请求：
-
-{
-  "title": "好奇心钻装纸尿裤L40片9-14kg"
-}
-
-
-响应示例：
-
-{
-  "title": "好奇心钻装纸尿裤L40片9-14kg",
-  "label": "母婴"
-}
-
-前端界面
+###前端界面
 
 该项目还提供了前端界面，用户可以通过简单的输入框来提交商品标题并获取类目预测。
 
 打开 index.html 文件，直接在浏览器中使用前端界面进行预测。
 
-实验结果
+
+###实验结果
 
 在商品标题类目预测任务中，BERT 模型的准确率达到 92.93%，在各类评估指标上均超越了传统的机器学习模型和其他深度学习模型。
 
