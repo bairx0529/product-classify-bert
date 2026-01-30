@@ -1,0 +1,103 @@
+{
+  "builder_name": "csv",
+  "citation": "",
+  "config_name": "default",
+  "dataset_name": "csv",
+  "dataset_size": 7766355,
+  "description": "",
+  "download_checksums": {
+    "D:/workspace/nlp/product-classify-bert/data/raw/train.txt": {
+      "num_bytes": 4644637,
+      "checksum": null
+    },
+    "D:/workspace/nlp/product-classify-bert/data/raw/test.txt": {
+      "num_bytes": 1161322,
+      "checksum": null
+    },
+    "D:/workspace/nlp/product-classify-bert/data/raw/valid.txt": {
+      "num_bytes": 1161322,
+      "checksum": null
+    }
+  },
+  "download_size": 6967281,
+  "features": {
+    "label": {
+      "names": [
+        "\u5bb6\u5c45",
+        "\u5bb6\u7535",
+        "\u5065\u5eb7",
+        "\u670d\u9970\u5185\u8863",
+        "\u73a9\u5177",
+        "\u978b\u9774\u7bb1\u5305",
+        "\u9999\u70df",
+        "\u7cae\u6cb9\u901f\u98df",
+        "\u9152\u996e\u51b2\u8c03",
+        "\u7f8e\u5986",
+        "\u6e05\u6d01",
+        "\u9910\u996e",
+        "\u6bcd\u5a74",
+        "\u4e2a\u62a4",
+        "\u852c\u83dc",
+        "\u4f11\u95f2\u98df\u54c1",
+        "\u529e\u516c",
+        "\u6c34\u4ea7",
+        "\u8089\u79bd\u86cb",
+        "\u5ba0\u7269",
+        "\u4e73\u54c1",
+        "\u793c\u54c1",
+        "3C\u6570\u7801",
+        "\u5065\u5eb7\u98df\u54c1",
+        "\u6c7d\u8f66\u7528\u54c1",
+        "\u6c34\u679c",
+        "\u949f\u8868\u914d\u9970",
+        "\u9c9c\u82b1\u7eff\u690d",
+        "\u8fd0\u52a8",
+        "\u4e66\u7c4d"
+      ],
+      "_type": "ClassLabel"
+    },
+    "input_ids": {
+      "feature": {
+        "dtype": "int32",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    },
+    "attention_mask": {
+      "feature": {
+        "dtype": "int8",
+        "_type": "Value"
+      },
+      "_type": "Sequence"
+    }
+  },
+  "homepage": "",
+  "license": "",
+  "size_in_bytes": 14733636,
+  "splits": {
+    "train": {
+      "name": "train",
+      "num_bytes": 5177367,
+      "num_examples": 88824,
+      "dataset_name": "csv"
+    },
+    "test": {
+      "name": "test",
+      "num_bytes": 1294494,
+      "num_examples": 22207,
+      "dataset_name": "csv"
+    },
+    "valid": {
+      "name": "valid",
+      "num_bytes": 1294494,
+      "num_examples": 22207,
+      "dataset_name": "csv"
+    }
+  },
+  "version": {
+    "version_str": "0.0.0",
+    "major": 0,
+    "minor": 0,
+    "patch": 0
+  }
+}

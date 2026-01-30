@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="Black">
+    <option name="sdkName" value="nlp" />
+  </component>
+  <component name="ProjectRootManager" version="2" project-jdk-name="Remote Python 3.12.12 (sftp://brx@10.105.10.2:22/home/brx/software/anconda/envs/product-classify/bin/python3.12)" project-jdk-type="Python SDK" />
+</project>
